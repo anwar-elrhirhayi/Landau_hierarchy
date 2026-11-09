@@ -11,8 +11,8 @@ const DV = 2 * VMAX / NV  # DV_x = DV_y = DV
 const NV2 = NV * NV
 const DV2 = DV * DV
 # Velocity grid
-const TAB_Vx = TAB_Vx = [ -VMAX + (i - 0.5) * DV for i in 1:NV] # vx grid
-const TAB_Vy = copy(TAB_Vx)                                     # vy grid
+const TAB_Vx = [ -VMAX + (i - 0.5) * DV for i in 1:NV] # vx grid
+const TAB_Vy = copy(TAB_Vx)                            # vy grid
 
 ##################################################
 # CORRESPONDENCE (i, j) --> l
