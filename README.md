@@ -6,7 +6,7 @@ This code simulates the relaxation to equilibrium of an anisotropic, long-range 
 - the **Lyapunov equation** for the second-order cumulant $S_2$, which gives the finite-$N$ variance of observables;
 - the **Lyapunov equation** for the third-order cumulant $S_3$ (with a closure), which gives the third moment.
 
-Together, these predict the finite-${N}$ fluctuations of observables such as the temperatures $T_{x}$ and $T_{y}$, without running N-body simulations.
+Together, these predict the finite $-N$ fluctuations of observables such as the temperatures $T_{x}$ and $T_{y}$, without running N-body simulations.
 
 ## Installation
 
