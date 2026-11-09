@@ -15,7 +15,7 @@ The code is written in [Julia](https://julialang.org/downloads/). The required p
 ```julia
 using Pkg
 Pkg.add(["ArgParse", "BenchmarkTools", "HDF5", "FFTW", "MuladdMacro",
-         "FilePathsBase", "BlockArrays", "LoopVectorization", "Plots"])
+         "FilePathsBase", "BlockArrays", "Plots"])
 ```
 
 `Random` and `LinearAlgebra` are part of Julia's standard library and need no installation.
