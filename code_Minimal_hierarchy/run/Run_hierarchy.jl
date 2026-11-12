@@ -1,9 +1,26 @@
 #=
+For Landau F: 
 julia --check-bounds=no run/Run_Hierarchy.jl \
 --Mtot 1.0 --Nv 20 --Npart 100 \
 --kmin 10 --kmax 100 \
 --vmax 6.0 --dt 1 \
 --Nsteps 1000 --hierarchy F \
+--IC MAXW --method FFT
+
+For Lyapunov S2:
+julia --check-bounds=no run/Run_Hierarchy.jl \
+--Mtot 1.0 --Nv 20 --Npart 100 \
+--kmin 10 --kmax 100 \
+--vmax 6.0 --dt 5 \
+--Nsteps 200 --hierarchy S2 \
+--IC MAXW --method FFT
+
+For S3:
+julia --check-bounds=no run/Run_Hierarchy.jl \
+--Mtot 1.0 --Nv 14 --Npart 100 \
+--kmin 10 --kmax 100 \
+--vmax 6.0 --dt 20 \
+--Nsteps 50 --hierarchy S3 \
 --IC MAXW --method FFT
 =#
 
@@ -223,7 +240,6 @@ function run_simulation!()
     for n in 1:NSTEPS
         integrate_dt!() # integrate S over [t, t+dt]
         TAB_TIME[n+1] = n * DT
-        println(n)
         store_observables!(n+1)
     end
 end
