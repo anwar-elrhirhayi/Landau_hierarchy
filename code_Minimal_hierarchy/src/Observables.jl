@@ -1871,7 +1871,7 @@ function compute_all_variances()
     end
 
     fill!(TAB_REDUCED_OBSERVABLE_ACC, 0.0)
-    @inbounds for tid in 1:Threads.nthreads()
+    @inbounds for tid in 1:Threads.nthreads()+1
         @simd for iobs in 1:N_OBSERVABLES
             TAB_REDUCED_OBSERVABLE_ACC[iobs] += TAB_VAR_OBSERVABLE_ACC[iobs, tid]
         end
@@ -1906,7 +1906,7 @@ function compute_all_M3()
     end
 
     fill!(TAB_REDUCED_OBSERVABLE_ACC, 0.0)
-    @inbounds for tid in 1:Threads.nthreads()
+    @inbounds for tid in 1:Threads.nthreads()+1
         @simd for iobs in 1:N_OBSERVABLES
             TAB_REDUCED_OBSERVABLE_ACC[iobs] += TAB_M3_OBSERVABLE_ACC[iobs, tid]
         end
